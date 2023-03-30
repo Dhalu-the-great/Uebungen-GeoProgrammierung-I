@@ -89,13 +89,42 @@ class Kreis (Figur):
     def umfang(self):
         return self.r*2*pi
 
+class Polygon(Figur):
+    def __init__(self,*args):
+        super().__init__("Polygon")
+        self.punkte=[]
+        for i in range(0,len(args),2):
+            x,y=args[i],args[i+1]
+            self.punkte.append(Punkt(x,y))
+
+    def umfang(self):
+        umfang = 0
+        for i in range(len(self.punkte)):
+            x = (i+1)%len(self.punkte)
+            seite=self.punkte[i].dist(self.punkte[x])
+            umfang += seite
+        return umfang
+        
+    def flaeche(self):
+        flaeche= 0
+        for i in range(len(self.punkte)):
+            x=(i+1)%len(self.punkte)
+            flaeche+=self.punkte[i].x*self.punkte[x].y
+            flaeche-=self.punkte[i].y*self.punkte[x].x
+        return abs(flaeche/2)
+            
+        
+
 p = Punkt(1, 2)
 d = Dreieck(0, 0, 0, 2, 2, 2)
 r=Rechteck(0,0,2,2)
 k=Kreis(0,0,10)
+test=Polygon(0,0,0,2,2,2,2,0,2,-2,0,-2)
 print(d.umfang())
 print(d.flaeche())
 print(r.umfang())
 print(r.flaeche())
 print(k.flaeche())
 print(k.umfang())
+print(test.umfang())
+print(test.flaeche())
