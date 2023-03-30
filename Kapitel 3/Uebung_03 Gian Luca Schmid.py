@@ -58,12 +58,12 @@ class Dreieck(Figur):
         return self.A.dist(self.B) + self.B.dist(self.C) + self.C.dist(self.A)
 
 class Rechteck(Figur):
-    def __init__(self,ax,ay,bx,by,cx,cy,dx,dy):
+    def __init__(self,ax,ay,bx,by):
         super().__init__("Rechteck")
         self.A = Punkt(ax,ay)
-        self.B = Punkt(bx,by)
-        self.C = Punkt(cx,cy)
-        self.D = Punkt(dx,dy)
+        self.C = Punkt(bx,by)
+        self.D = Punkt(ax,by)
+        self.B = Punkt(bx,ay)
 
 
 
@@ -91,7 +91,7 @@ class Kreis (Figur):
 
 p = Punkt(1, 2)
 d = Dreieck(0, 0, 0, 2, 2, 2)
-r=Rechteck(0,0,2,0,2,2,0,2)
+r=Rechteck(0,0,2,2)
 k=Kreis(0,0,10)
 print(d.umfang())
 print(d.flaeche())
