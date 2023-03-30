@@ -1,56 +1,64 @@
-class figur:
-    def __init__ (self, name):
-        self.name=name
+class Figur:
+    def __init__(self, name):
+        self.name = name
+        
     def umfang(self):
         return 0
+    
     def flaeche(self):
         return 0
-    def __str__ (self):
-        return f"{self.name}"
     
-class punkt (figur):
-    def __init__ (self,x,y):
-        super().__init__("punkt")
-        self.x=x
-        self.y=y
+    def __str__(self):
+        return f"{self.name}"
 
-    def __sub__ (self,other):
-        return vector2(self.x-other.x,self.y-other.y)
+    
+class Punkt(Figur):
+    def __init__(self, x, y):
+        super().__init__("Punkt")
+        self.x = x
+        self.y = y
 
-    def dist(self,other):
-        return ((self.x-other.x)**2+(self.y-other.y)**2)**0.5
+    def __sub__(self, other):
+        return Vector2(self.x - other.x, self.y - other.y)
 
-    def __str__ (self):
+    def dist(self, other):
+        return ((self.x - other.x) ** 2 + (self.y - other.y) ** 2) ** 0.5
+
+    def __str__(self):
         return f"[{self.name}, x={self.x}, y={self.y}]"
 
-class vector2(figur):
-    def __init__ (self,x,y):
+    
+class Vector2(Figur):
+    def __init__(self, x, y):
         super().__init__("Vector2")
-        self.x=x
-        self.y=y
+        self.x = x
+        self.y = y
     
-    def cross (self,other):
-        return ((self.y*other.x-self.x*other.y)**2+(self.x*other.y-self.y*other.x)**2)**0.5
+    def cross(self, other):
+        return abs(self.x * other.y - self.y * other.x)
     
-class dreieck(figur):
-    def __init__(self,Ax,Ay,Bx,By,Cx,Cy):
-        super().__init__("Punkt")
-        self.A=punkt(Ax,Ay)
-        self.B=punkt(Bx,By)
-        self.C=punkt(Cx,Cy)
+    
+class Dreieck(Figur):
+    def __init__(self, Ax, Ay, Bx, By, Cx, Cy):
+        super().__init__("Dreieck")
+        self.A = Punkt(Ax, Ay)
+        self.B = Punkt(Bx, By)
+        self.C = Punkt(Cx, Cy)
 
     def flaeche(self):
-        v1=(self.B-self.A)
-        v2=(self.C-self.A)
-        return v1.cross(v2)
+        v1 = (self.B - self.A)
+        v2 = (self.C - self.A)
+        return v1.cross(v2) / 2
         
-    def __str__ (self):
+    def __str__(self):
         return f"[{self.A}, {self.B}, {self.C}]"
 
     def umfang(self):
-        return self.A.dist(self.B)+self.B.dist(self.B)+self.C.dist(self.A)
-p=punkt(1,2)
-d=dreieck(1,2,3,4,5,6)
+        return self.A.dist(self.B) + self.B.dist(self.C) + self.C.dist(self.A)
+
+
+p = Punkt(1, 2)
+d = Dreieck(0, 0, 0, 2, 2, 2)
 
 print(d.umfang())
 print(d.flaeche())
