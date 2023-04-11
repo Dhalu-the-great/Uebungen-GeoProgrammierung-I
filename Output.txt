@@ -1,1 +1,1 @@
-mes affaires,salut,01/01/2000,3 rue des noix de coco,3647,Petaosnok,Schweiz
+Gian Luca,Schmid,25/12/2001,Cortebert 201,2608,Courtelary,Schweiz
