@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>534</width>
+    <width>374</width>
     <height>207</height>
    </rect>
   </property>
@@ -26,7 +26,7 @@
        </font>
       </property>
       <property name="text">
-       <string>BRAVO!</string>
+       <string>Congrats!</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -44,7 +44,7 @@
        </font>
       </property>
       <property name="text">
-       <string>Vous êtes-Stupide!</string>
+       <string>You are Stupid</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -58,7 +58,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>534</width>
+     <width>374</width>
      <height>21</height>
     </rect>
    </property>

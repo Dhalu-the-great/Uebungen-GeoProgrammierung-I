@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>467</width>
+    <width>312</width>
     <height>360</height>
    </rect>
   </property>
@@ -28,7 +28,7 @@
          </font>
         </property>
         <property name="text">
-         <string>NON</string>
+         <string>NO</string>
         </property>
        </widget>
       </item>
@@ -61,7 +61,7 @@
          <enum>Qt::LeftToRight</enum>
         </property>
         <property name="text">
-         <string>OUI</string>
+         <string>YES</string>
         </property>
        </widget>
       </item>
@@ -76,7 +76,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Êtes-vous stupide?</string>
+         <string>Are you Stupid?</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -92,7 +92,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>467</width>
+     <width>312</width>
      <height>21</height>
     </rect>
    </property>

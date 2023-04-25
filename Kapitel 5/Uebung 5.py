@@ -1,8 +1,7 @@
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
-import sys
-import os
+
 
 class fenster(QMainWindow):
     def __init__(self):

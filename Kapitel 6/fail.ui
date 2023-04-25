@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>556</width>
+    <width>499</width>
     <height>283</height>
    </rect>
   </property>
@@ -26,7 +26,7 @@
        </font>
       </property>
       <property name="text">
-       <string>NON!</string>
+       <string>No!</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -44,7 +44,7 @@
        </font>
       </property>
       <property name="text">
-       <string>Vous n'avez pas compris la question!!</string>
+       <string>You did not understand the question</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -62,7 +62,7 @@
        </font>
       </property>
       <property name="text">
-       <string>Rééssayer</string>
+       <string>Retry</string>
       </property>
      </widget>
     </item>
@@ -73,7 +73,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>556</width>
+     <width>499</width>
      <height>21</height>
     </rect>
    </property>
