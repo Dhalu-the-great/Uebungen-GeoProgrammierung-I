@@ -28,7 +28,7 @@ class UIFenster(QMainWindow):
             win.show()
             self.windows.append(win)
         else:
-            for i in range(1):
+            for i in range(42):
                 win = Window()
                 win.show()
                 self.windows.append(win)
@@ -50,7 +50,7 @@ class Window(QMainWindow):
                 self.windows.append(win)
     
     def aide (self):
-        link="https://www.fhnw.ch/de/die-fhnw/it-support"
+        link="https://scoutspierrepertuis.ch/caju23/"
         QDesktopServices.openUrl(QUrl(link))
         
     
