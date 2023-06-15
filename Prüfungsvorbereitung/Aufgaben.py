@@ -63,4 +63,40 @@ class Rechteck(Shape):
 r1=Rechteck(2,4,3,6)
 print(r1.area())
 
+from PyQt5.QtWidgets import *
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+from PyQt5.uic import *
+from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanevas
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+
+class fenster(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        loadUi("prüfungsvorbereitung/gui.ui",self)
+
+        self.setWindowTitle("Ui Dreck")
+
+        self.pushButton.clicked.connect(self.drucken)
+        self.pushButton_2.clicked.connect(self.load)
+    
+        self.show()
+
+    def load (self):
+        path , filter = QFileDialog.getOpenFileName(self,"Datei Öffnen","","Text Dateien (*.txt)")
+        file = open(path,"r",encoding="utf-8")
+        data=file.read()
+        print(data)
+    
+    def drucken(self):
+        print(self.lineEdit.text())
+
+
+
+app = QApplication([])
+win = fenster()
+app.exec_()
 
