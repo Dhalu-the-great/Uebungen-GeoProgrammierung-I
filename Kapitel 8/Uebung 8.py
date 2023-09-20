@@ -84,3 +84,5 @@ class fenster(QMainWindow):
 app = QApplication([])
 win = fenster()
 app.exec_()
+
+print("hello world")

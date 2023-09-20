@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>367</width>
-    <height>164</height>
+    <width>800</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,14 +16,14 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QLabel" name="Input">
+     <widget class="QLabel" name="label">
       <property name="font">
        <font>
         <pointsize>15</pointsize>
        </font>
       </property>
       <property name="text">
-       <string>Visualisierungsmedium Auswählen</string>
+       <string>Checkliste</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -31,19 +31,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QComboBox" name="Media"/>
-    </item>
-    <item>
-     <widget class="QPushButton" name="Ok">
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Laden</string>
-      </property>
-     </widget>
+     <layout class="QFormLayout" name="formLayout"/>
     </item>
    </layout>
   </widget>
@@ -52,7 +40,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>367</width>
+     <width>800</width>
      <height>21</height>
     </rect>
    </property>

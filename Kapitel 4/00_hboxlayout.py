@@ -33,6 +33,7 @@ class fenster(QMainWindow):
 
         self.show()
 
+
 app= QApplication([])
 win= fenster()
 app.exec()
